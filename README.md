@@ -28,27 +28,7 @@ The solution is designed as a smartphone application used at the point of dispos
 * **AI Techniques:** 
   * **Computer Vision:** A lightweight Convolutional Neural Network (CNN) like MobileNetV2 will be used for on-device image classification to ensure fast, offline-capable predictions.
   * **Natural Language Processing (NLP):** Basic keyword matching or a small transformer model to parse unstructured municipal text guidelines into structured, machine-readable rules.
- 
-  * Challenges
-  * 
-Technical Limitations: Real-world conditions like poor lighting, crumpled items, or occlusion can reduce image classification accuracy.
-Data Maintenance: Municipal recycling rules change frequently. Keeping the database updated requires automated scraping pipelines or official API partnerships.
-Ethical Considerations: The app requires location data to provide accurate local rules. This raises privacy concerns. The solution must process location data locally on the device or strictly anonymize it, ensuring no personal tracking or data selling occurs.
-
-What next?
-To evolve from a prototype to a fully deployed community tool, the project needs:
-Partnerships: Collaboration with local city councils to access official, real-time waste management APIs.
-Feature Expansion: Integrating barcode scanning as a fallback when the camera cannot visually identify the object.
-Gamification: Adding community leaderboards and rewards to encourage consistent use.
-To achieve this, I would seek assistance from backend developers for database management and UX/UI designers to make the app accessible to all age groups.
-
-Acknowledgments
-TACO Dataset: Trash Annotations in Context by Pedro Proença / MIT License.
-Inspiration: Concepts from existing sustainability apps like Recycle Coach, but reimagined with a primary focus on on-device AI computer vision for a frictionless user experience.
-Course Material: The "Building AI" course by the University of Helsinki and Reaktor Innovations for providing the foundational knowledge to structure this AI solution responsibly.
-
-
-Here is a simplified example of how the classification and rule-matching logic might be structured in Python:
+ Here is a simplified example of how the classification and rule-matching logic might be structured in Python:
 
 ```python
 import tensorflow as tf
@@ -80,3 +60,24 @@ def get_local_rule(item, city_zip_code):
 # identified_item = predict_item(user_camera_input)
 # action = get_local_rule(identified_item, "90210")
 # print(f"Action: {action}")
+
+Challenges
+
+Technical Limitations: Real-world conditions like poor lighting, crumpled items, or occlusion can reduce image classification accuracy.
+Data Maintenance:
+ Municipal recycling rules change frequently. Keeping the database updated requires automated scraping pipelines or official API partnerships.
+Ethical Considerations:
+The app requires location data to provide accurate local rules. This raises privacy concerns. The solution must process location data locally on the device or strictly anonymize it, ensuring no personal tracking or data selling occurs.
+
+
+What next?
+To evolve from a prototype to a fully deployed community tool, the project needs:
+Partnerships: Collaboration with local city councils to access official, real-time waste management APIs.
+Feature Expansion: Integrating barcode scanning as a fallback when the camera cannot visually identify the object.
+Gamification: Adding community leaderboards and rewards to encourage consistent use.
+To achieve this, I would seek assistance from backend developers for database management and UX/UI designers to make the app accessible to all age groups.
+Acknowledgments
+TACO Dataset: Trash Annotations in Context by Pedro Proença / MIT License.
+Inspiration: Concepts from existing sustainability apps like Recycle Coach, but reimagined with a primary focus on on-device AI computer vision for a frictionless user experience.
+Course Material: The "Building AI" course by the University of Helsinki and Reaktor Innovations for providing the foundational knowledge to structure this AI solution responsibly.
+
