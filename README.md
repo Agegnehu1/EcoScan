@@ -39,6 +39,7 @@ Ethical Considerations:
 The app requires location data to provide accurate local rules. This raises privacy concerns. The solution must process location data locally on the device or strictly anonymize it, ensuring no personal tracking or data selling occurs.
 
 **What next?**
+
 To evolve from a prototype to a fully deployed community tool, the project needs:
 Partnerships: Collaboration with local city councils to access official, real-time waste management APIs.
 Feature Expansion: Integrating barcode scanning as a fallback when the camera cannot visually identify the object.
@@ -48,7 +49,9 @@ To achieve this, I would seek assistance from backend developers for database ma
 **Acknowledgments**
 
 **TACO Dataset:** Trash Annotations in Context by Pedro Proença / MIT License.
+
 **Inspiration:** Concepts from existing sustainability apps like Recycle Coach, but reimagined with a primary focus on on-device AI computer vision for a frictionless user experience.
+
 **Course Material:** The "Building AI" course by the University of Helsinki and Reaktor Innovations for providing the foundational knowledge to structure this AI solution responsibly.
 
  Here is a simplified example of how the classification and rule-matching logic might be structured in Python:
